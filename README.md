@@ -73,4 +73,21 @@ storeFile(options).then((data) => {
 
 Finally, the `sync` property of the options object in your storeFile call is the way you indicate whether or not you want to store to Blockstack & IPFS/Blockstack-Only or if you just want to store to your local storage. Using this property wisely will allow you to cut down on http request and hopefully improve performance of your app.
 
-If you indicate `sync: false` but also include `ipfs: true`, your ipfs property will be ignored. 
+If you indicate `sync: false` but also include `ipfs: true`, your ipfs property will be ignored.
+
+Finally, to use IPFS, you will need to install [js-ipfs](https://github.com/ipfs/js-ipfs) and include it in your project somewhere so that a node is initiated and available before you push a file to IPFS. For example, in the parent component of a React project, you can initialize your node so that it is available across all components by requiring it:
+
+```
+const IPFS = require("ipfs");
+const node = new IPFS();
+```
+
+Then, since the example we are talking about is a React project, you would include the following in your `componentDidMount` method:
+
+```
+node.on('ready', async () => {
+  const version = await node.version()
+
+  console.log('Version:', version.version)
+})
+```
