@@ -9,10 +9,10 @@ While Blockstack's Gaia storage, IPFS, and TurtleDB storage are all great on the
 
 ### Getting Started
 
-*Install*  
+**Install**  
 `npm install decentralized-db`  
 
-*Import/Require*  
+**Import/Require**  
 `import { storeFile, loadFile } from "decentralizedDB"`  
 `const decentralizedDB = require("decentralized-db")`  
 
@@ -22,13 +22,13 @@ Once you've imported/required the package, you can start using the functions. Re
 
 When you're ready to update a file or a store a new one, you'll simple need to call `storeFile` with the following options:
 
--filename [String]
--encrypt [boolean]
--ipfs [boolean]
--sync [boolean]
--data [Object or String or Boolean or Array]
+- filename [String]  
+- encrypt [boolean]  
+- ipfs [boolean]  
+- sync [boolean]  
+- data [Object or String or Boolean or Array]  
 
-*Important Notes:*
+**Important Notes:**
 The filename String needs to have a suffix of '.json', '.txt', or some other valid extension that can contain string data. This is because storing to Blockstack and IPFS requires a valid pathname. The filename will act as both the pathname and your identifier for local IndexedDB storage.
 
 Example:
