@@ -1,0 +1,20 @@
+{
+  "name": "decentralized-db",
+  "version": "0.1.0",
+  "description": "Decentralized, offline-first, encrypted storage layer using Blockstack, IPFS, and TurtleDB",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Graphite-Docs/decentralized-db"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "dependencies": {
+    "blockstack": "^18.1.0",
+    "ipfs": "^0.33.1",
+    "turtledb": "^1.0.2"
+  }
+}
